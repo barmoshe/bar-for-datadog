@@ -101,7 +101,7 @@ const PROOF: Proof[] = [
   {
     tag: 'OPEN SOURCE · MCP SERVER',
     title: 'MDP',
-    desc: 'A Markdown to document compiler, published on npm, with an MCP server and Claude Code and Codex plugins so agents render through it. The exact surface this team works on: a tool an AI agent reaches for.',
+    desc: 'A Markdown to document compiler I published on npm, with an MCP server and Claude Code and Codex plugins so agents render through it. A tool an AI agent reaches for, which is the surface this team works on.',
     href: 'https://barmoshe.github.io/mdp/',
     open: 'Open MDP',
     visual: MdpVisual,
@@ -109,7 +109,7 @@ const PROOF: Proof[] = [
   {
     tag: 'ORCHESTRATION · CODE EXCHANGE',
     title: 'Cross-language orchestration',
-    desc: 'One Temporal workflow coordinating Go, Python, and TypeScript workers as a single durable pipeline. Featured on Temporal’s Code Exchange. The distributed-systems muscle behind production observability.',
+    desc: 'One Temporal workflow coordinating Go, Python, and TypeScript workers as a single durable pipeline. Featured on Temporal’s Code Exchange. Distributed, cross-service work, the kind production observability has to see into.',
     href: 'https://temporal.io/code-exchange/cross-language-data-processing-service-with-temporal',
     open: 'See the writeup',
     visual: OrchestrateVisual,
@@ -117,7 +117,7 @@ const PROOF: Proof[] = [
   {
     tag: 'FULL-STACK BACKEND',
     title: 'Israelify',
-    desc: 'A streaming app with a Node API, auth, middleware, and a custom logger behind a React front end. The plain product-engineering and backend base under the AI work.',
+    desc: 'A streaming app with a Node API, auth, middleware, and a custom logger behind a React front end. Plain product-engineering and backend work, the base under the AI projects.',
     href: 'https://github.com/barmoshe/Israelify-backend',
     open: 'View the code',
     visual: AppVisual,
@@ -130,22 +130,22 @@ const FIT: Fit[] = [
   {
     k: 'Tools for AI agents',
     lead: 'MCP servers, editor plugins, agent surfaces.',
-    body: 'MDP ships a working MCP server plus Claude Code and Codex plugins. That is the same integration surface this team builds for: Cursor, Claude Code, Copilot, and Datadog’s own agents reaching for a tool and getting a clean answer back.',
+    body: 'MDP ships a working MCP server plus Claude Code and Codex plugins. That is the same integration surface this team builds for: Cursor, Claude Code, Copilot, and Datadog’s own agents calling a tool over MCP.',
   },
   {
     k: 'LLM software in production',
     lead: 'Shipped, evaluated, live on npm.',
-    body: 'My day-to-day is taking a model from prompt to a product people use. MDP turns a brief into a valid artifact deterministically, with a self-healing validation loop so agents cannot produce slop. Real output, real users.',
+    body: 'I take LLM features from prompt to a shipped product. MDP compiles a brief into a document deterministically and runs a validation loop that re-renders until the output is valid. It is on npm and in use.',
   },
   {
     k: 'Backend at scale',
     lead: 'Durable workflows across services.',
-    body: 'The Temporal project coordinates Go, Python, and TypeScript workers behind one workflow. Production-ready APIs and event-driven, cross-service execution are home ground, and they are what observability has to see into.',
+    body: 'The Temporal project coordinates Go, Python, and TypeScript workers behind one workflow. I work in production APIs and event-driven, cross-service execution, which is what observability has to see into.',
   },
   {
     k: 'Developer tools and DevOps',
     lead: 'IDE-adjacent tooling, AWS, Kubernetes, Terraform.',
-    body: 'I build for the editor and I run what I ship. MDP lives inside the editor through plugins and a plan-mode hook; the deploys ride EKS, Terraform, and CI/CD from the Wix DevOps track, applied daily as the primary engineer at an early-stage startup.',
+    body: 'I build for the editor and I run what I ship. MDP lives inside the editor through plugins and a plan-mode hook. I deploy on EKS with Terraform and CI/CD, picked up on the Wix DevOps track and used daily as the primary engineer at an early-stage startup.',
   },
 ];
 
@@ -170,7 +170,7 @@ export default function DatadogApp() {
           <div className="dd-nav__cta">
             <a className="dd-btn dd-btn--ghost dd-btn--sm" href={CV} target="_blank" rel="noopener noreferrer">Download CV</a>
             <a className="dd-btn dd-btn--primary dd-btn--sm" href={EMAIL}>
-              <span className="dd-nav__full">Start a conversation</span>
+              <span className="dd-nav__full">Let’s talk</span>
               <span className="dd-nav__short">Let’s talk</span>
             </a>
           </div>
@@ -187,16 +187,16 @@ export default function DatadogApp() {
                 AI DEVELOPER WORKFLOWS · TEL AVIV
               </p>
               <h1 className="dd-title">
-                I build the <span className="dd-title__accent">agent tooling and developer workflows</span> Datadog is bringing to AI.
+                Software engineer. <span className="dd-title__accent">Agent tooling and developer workflows.</span>
               </h1>
               <p className="dd-lede">
-                MCP servers, editor plugins, and the orchestration that holds them together,
-                from idea to production. The work the team lists, the integrations it names,
-                and the “one click to reproduce” story are things I have already shipped.
+                I build MCP servers, editor plugins, and the orchestration that connects them,
+                and I own them from design through deploy. I work in Go, Python, and TypeScript.
+                Below: a few things I have shipped, and where they line up with this role.
               </p>
               <div className="dd-hero__cta">
                 <a className="dd-btn dd-btn--primary" href={EMAIL}>
-                  Start a conversation
+                  Let’s talk
                   <span className="dd-btn__arrow" aria-hidden="true">→</span>
                 </a>
                 <a className="dd-btn dd-btn--ghost" href={CV} target="_blank" rel="noopener noreferrer">
@@ -231,11 +231,11 @@ export default function DatadogApp() {
           <div className="dd-wrap">
             <header className="dd-section__head">
               <p className="dd-kicker">From alert to fix</p>
-              <h2 className="dd-h2">A production error should not need a human to reproduce it.</h2>
+              <h2 className="dd-h2">A working model of the kind of surface I build.</h2>
               <p className="dd-sub">
-                The kind of surface I build: an error fires in production, an agent pulls the
-                trace through an MCP tool, reproduces it, and proposes the fix. The Live Debugger
-                vision, “one click to reproduce,” built from scratch for this page in your brand.
+                An error fires in production, an agent pulls the trace through an MCP tool,
+                reproduces it, and proposes the fix. This is the Live Debugger “one click to
+                reproduce” idea, built from scratch for this page in your brand.
               </p>
             </header>
             <DebugConsole />
@@ -246,7 +246,7 @@ export default function DatadogApp() {
         <section id="work" className="dd-section">
           <div className="dd-wrap">
             <header className="dd-section__head">
-              <p className="dd-kicker">Proof, not claims</p>
+              <p className="dd-kicker">Selected work</p>
               <h2 className="dd-h2">A few things I have shipped.</h2>
               <p className="dd-sub">Each one is live. Open it and check for yourself.</p>
             </header>
@@ -283,8 +283,8 @@ export default function DatadogApp() {
         <section id="fit" className="dd-section dd-section--soft">
           <div className="dd-wrap">
             <header className="dd-section__head">
-              <p className="dd-kicker">Why me, for this role</p>
-              <h2 className="dd-h2">Your posting, mapped to work I have already done.</h2>
+              <p className="dd-kicker">Experience, mapped to the role</p>
+              <h2 className="dd-h2">What the posting asks for, and where I have done it.</h2>
             </header>
             <div className="dd-fit__grid">
               {FIT.map((f, i) => (
@@ -303,10 +303,9 @@ export default function DatadogApp() {
         <section className="dd-cta">
           <div className="dd-cta__inner">
             <BitsDog className="dd-bits--lg" />
-            <h2 className="dd-cta__title">Let’s build it together.</h2>
+            <h2 className="dd-cta__title">Let’s talk.</h2>
             <p className="dd-cta__sub">
-              If the work above looks like the kind of engineer you want on the AI Developer
-              Workflows team, I am one message away.
+              If this looks like a fit for the AI Developer Workflows team, I am one message away.
             </p>
             <div className="dd-cta__links">
               <a className="dd-btn dd-btn--onpurple" href={EMAIL}>Email me</a>

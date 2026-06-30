@@ -8,7 +8,7 @@ import { ImageResponse } from 'next/og';
 // tags automatically.
 
 export const alt =
-  'Bar Moshe for Datadog — Software Engineer, AI Developer Workflows. Agent tooling, MCP servers, one click to reproduce.';
+  'Bar Moshe for Datadog, Software Engineer, AI Developer Workflows. Agent tooling, MCP servers, one click to reproduce.';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -79,7 +79,7 @@ export default function Image() {
                 maxWidth: '1000px',
               }}
             >
-              The agent tooling Datadog is bringing to AI.
+              Agent tooling and developer workflows.
             </div>
             <div style={{ display: 'flex', fontSize: 32, color: '#4b4660', marginTop: '22px', maxWidth: '920px', lineHeight: 1.35 }}>
               MCP servers, editor plugins, and a working &ldquo;one click to reproduce&rdquo; debug console.

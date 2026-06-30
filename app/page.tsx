@@ -30,9 +30,9 @@ const mono = JetBrains_Mono({
 // Datadog's own visual language (cosmic-purple field, the signature #632CA6
 // purple, mono trace labels). Not part of the public site map, noindex so it
 // stays a private, shareable link sent to the Datadog team.
-const ogTitle = "Bar Moshe × Datadog — AI Developer Workflows";
+const ogTitle = "Bar Moshe × Datadog · AI Developer Workflows";
 const ogDescription =
-  "Bar Moshe, software engineer. I build the agent tooling, MCP servers, and developer workflows Datadog is now bringing to AI. Here is that work, in your language.";
+  "Bar Moshe, software engineer. I build agent tooling, MCP servers, and developer workflows in Go, Python, and TypeScript. A few things I have shipped, mapped to the AI Developer Workflows role.";
 
 // noindex (private, shareable link) but a rich share card still renders for
 // direct shares (email / DM / LinkedIn). The og:image / twitter:image tags are
