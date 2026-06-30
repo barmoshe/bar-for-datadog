@@ -40,87 +40,44 @@ type Proof = {
   title: string;
   desc: string;
   href: string;
-  open: string;
-  visual: React.ReactNode;
 };
-
-// MCP wire: a source panel feeding an artifact through a pulsing wire.
-const MdpVisual = (
-  <svg className="dd-vis" viewBox="0 0 220 120" aria-hidden="true" focusable="false">
-    <rect className="dd-vis__panel" x="14" y="26" width="78" height="68" rx="8" />
-    <rect className="dd-vis__line" x="24" y="38" width="44" height="6" rx="3" />
-    <rect className="dd-vis__line dd-vis__line--soft" x="24" y="52" width="58" height="4" rx="2" />
-    <rect className="dd-vis__line dd-vis__line--soft" x="24" y="62" width="40" height="4" rx="2" />
-    <rect className="dd-vis__line dd-vis__line--soft" x="24" y="76" width="50" height="4" rx="2" />
-    <line className="dd-vis__wire" x1="94" y1="60" x2="128" y2="60" />
-    <line className="dd-vis__flow" x1="94" y1="60" x2="128" y2="60" />
-    <circle className="dd-vis__pulse" r="3.5" />
-    <rect className="dd-vis__art" x="130" y="22" width="76" height="76" rx="8" />
-    <rect className="dd-vis__art-bar" x="140" y="34" width="46" height="8" rx="3" />
-    <rect className="dd-vis__line dd-vis__line--soft" x="140" y="50" width="54" height="4" rx="2" />
-    <rect className="dd-vis__chip" x="140" y="74" width="22" height="14" rx="4" />
-    <rect className="dd-vis__chip dd-vis__chip--b" x="168" y="74" width="22" height="14" rx="4" />
-  </svg>
-);
-
-// Orchestration: three language workers feeding one central workflow node.
-const OrchestrateVisual = (
-  <svg className="dd-vis" viewBox="0 0 220 120" aria-hidden="true" focusable="false">
-    <line className="dd-vis__edge" x1="40" y1="26" x2="110" y2="60" />
-    <line className="dd-vis__edge" x1="40" y1="60" x2="110" y2="60" />
-    <line className="dd-vis__edge" x1="40" y1="94" x2="110" y2="60" />
-    <line className="dd-vis__edge dd-vis__edge--out" x1="110" y1="60" x2="186" y2="60" />
-    <g className="dd-vis__worker"><rect x="14" y="18" width="36" height="16" rx="5" /><text x="32" y="30">Go</text></g>
-    <g className="dd-vis__worker"><rect x="14" y="52" width="36" height="16" rx="5" /><text x="32" y="64">Py</text></g>
-    <g className="dd-vis__worker"><rect x="14" y="86" width="36" height="16" rx="5" /><text x="32" y="98">TS</text></g>
-    <circle className="dd-vis__hub" cx="110" cy="60" r="16" />
-    <circle className="dd-vis__hub-ring" cx="110" cy="60" r="16" />
-    <rect className="dd-vis__sink" x="186" y="50" width="20" height="20" rx="5" />
-  </svg>
-);
-
-// Full-stack app: streaming rows with a now-playing accent bar.
-const AppVisual = (
-  <svg className="dd-vis" viewBox="0 0 220 120" aria-hidden="true" focusable="false">
-    <rect className="dd-vis__panel" x="14" y="16" width="192" height="88" rx="9" />
-    <circle className="dd-vis__disc" cx="40" cy="40" r="13" />
-    <rect className="dd-vis__line" x="62" y="32" width="80" height="6" rx="3" />
-    <rect className="dd-vis__line dd-vis__line--soft" x="62" y="44" width="54" height="4" rx="2" />
-    <rect className="dd-vis__row" x="26" y="68" width="168" height="9" rx="4.5" />
-    <rect className="dd-vis__row dd-vis__row--play" x="26" y="84" width="110" height="9" rx="4.5" />
-    <g className="dd-vis__eq" aria-hidden="true">
-      <rect x="150" y="82" width="4" height="12" rx="2" />
-      <rect x="158" y="78" width="4" height="16" rx="2" />
-      <rect x="166" y="84" width="4" height="10" rx="2" />
-      <rect x="174" y="80" width="4" height="14" rx="2" />
-    </g>
-  </svg>
-);
 
 const PROOF: Proof[] = [
   {
-    tag: 'OPEN SOURCE · MCP SERVER',
+    tag: 'Open source · AI tooling',
     title: 'MDP',
-    desc: 'A Markdown to document compiler I published on npm, with an MCP server and Claude Code and Codex plugins so agents render through it. A tool an AI agent reaches for, which is the surface this team works on.',
+    desc: 'An open-source Markdown compiler: one source becomes design-locked decks, pages, and docs. Built for AI agents to write into. Zero-dependency Node engine on npm, with an MCP server and Claude Code and Codex plugins.',
     href: 'https://barmoshe.github.io/mdp/',
-    open: 'Open MDP',
-    visual: MdpVisual,
   },
   {
-    tag: 'ORCHESTRATION · CODE EXCHANGE',
-    title: 'Cross-language orchestration',
-    desc: 'One Temporal workflow coordinating Go, Python, and TypeScript workers as a single durable pipeline. Featured on Temporal’s Code Exchange. Distributed, cross-service work, the kind production observability has to see into.',
+    tag: 'AI agents · Durable workflows',
+    title: 'Temporal plugin',
+    desc: 'A Temporal.io orchestration plugin for Claude Code: durable, retryable workflows for agents. A plugin other developers install.',
+    href: 'https://github.com/Base67-AI/temporal-plugin',
+  },
+  {
+    tag: 'AI · Pipeline',
+    title: 'MIDI GPT REST API',
+    desc: 'A REST API that generates MIDI: a multi-step pipeline on Temporal across Go, Python, and TypeScript workers, calling OpenAI with retries and validation.',
+    href: 'https://github.com/barmoshe/AI_MIDI_API',
+  },
+  {
+    tag: 'AI agents · Systems',
+    title: 'Creative Harness',
+    desc: 'An open AI-agent harness for Claude Code: skills, hooks, and tooling so one builder ships like a small team.',
+    href: 'https://github.com/barmoshe/claude-creative-stack',
+  },
+  {
+    tag: 'Backend · Durable workflows',
+    title: 'Temporal Data Service',
+    desc: 'A cross-language data-processing service on Temporal: Go, Python, and TypeScript workers under one durable workflow. Featured on Temporal’s Code Exchange.',
     href: 'https://temporal.io/code-exchange/cross-language-data-processing-service-with-temporal',
-    open: 'See the writeup',
-    visual: OrchestrateVisual,
   },
   {
-    tag: 'FULL-STACK BACKEND',
-    title: 'Israelify',
-    desc: 'A streaming app with a Node API, auth, middleware, and a custom logger behind a React front end. Plain product-engineering and backend work, the base under the AI projects.',
-    href: 'https://github.com/barmoshe/Israelify-backend',
-    open: 'View the code',
-    visual: AppVisual,
+    tag: 'Generative · Audio',
+    title: 'Biome',
+    desc: 'A generative pad synth in the browser, state-machine driven. Built with Tone.js, Three.js, and Canvas2D.',
+    href: 'https://biome-synth.lovable.app',
   },
 ];
 
@@ -134,8 +91,8 @@ const FIT: Fit[] = [
   },
   {
     k: 'LLM software in production',
-    lead: 'Shipped, evaluated, live on npm.',
-    body: 'I take LLM features from prompt to a shipped product. MDP compiles a brief into a document deterministically and runs a validation loop that re-renders until the output is valid. It is on npm and in use.',
+    lead: 'Shipped, orchestrated, running live.',
+    body: 'I take LLM features from prompt to a shipped product. My MIDI GPT REST API puts OpenAI behind a REST API, orchestrated with Temporal across Go, Python, and TypeScript workers as one durable, multi-step pipeline. It runs in production, not as a demo.',
   },
   {
     k: 'Backend at scale',
@@ -145,7 +102,7 @@ const FIT: Fit[] = [
   {
     k: 'Developer tools and DevOps',
     lead: 'IDE-adjacent tooling, AWS, Kubernetes, Terraform.',
-    body: 'I build for the editor and I run what I ship. MDP lives inside the editor through plugins and a plan-mode hook. I deploy on EKS with Terraform and CI/CD, picked up on the Wix DevOps track and used daily as the primary engineer at an early-stage startup.',
+    body: 'I build for the editor and I run what I ship. I deploy on EKS with Terraform and CI/CD, picked up on the Wix DevOps track and used daily as the primary full-stack and DevOps engineer at Joomsy, an early-stage startup (team of five), where I own features from design through deploy and keep them alive.',
   },
 ];
 
@@ -259,12 +216,11 @@ export default function DatadogApp() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="dd-pcard__screen">{p.visual}</div>
                   <div className="dd-pcard__body">
                     <span className="dd-pcard__tag">{p.tag}</span>
                     <h3 className="dd-pcard__title">{p.title}</h3>
                     <p className="dd-pcard__desc">{p.desc}</p>
-                    <span className="dd-pcard__link" aria-hidden="true">{p.open} →</span>
+                    <span className="dd-pcard__link" aria-hidden="true">View ↗</span>
                   </div>
                 </a>
               ))}
