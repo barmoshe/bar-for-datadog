@@ -1,0 +1,17 @@
+/* Minimal document base. The page surface is painted by the route's scoped
+   CSS (src/marketing/datadog/datadog.css); here we only zero document margins and
+   set the base colour so there is no flash before the React tree mounts. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #ffffff;
+  color-scheme: light;
+}
+
+body {
+  min-height: 100svh;
+}
